@@ -9,27 +9,36 @@
         #banner {
             height: 360px;
             width: 100%;
+            object-fit: cover;
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
+    {% include 'nav.html' %}
+    <img class='img-fluid' id="banner" src="http://127.0.0.1:5000/static/banner.jpg" alt="Giga Image", height = 600px, width= 1500>
     <div class = 'container'>
         <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-        <img class='img-fluid' id="banner" src="http://127.0.0.1:5000/static/banner.jpg" alt="Giga Image", height = 600px, width= 1500>
-        <h2 class="text-center mt-2 mb-4">About GigaByte</h2>
-        <p class="lead">GigaByte is a leading company in the field of technology. We are a team of 1000+ people working together to make the world a better place. 
-        We are looking for talented individuals to join our team. If you are passionate about technology and want to work with the best in the industry, you have come to the right place. 
-        Our company is headquartered in the beautiful city of Bengaluru, India. We have offices in Delhi, Mumbai, Chennai, and Hyderabad. 
-            Specializations: Artificial Intelligence, Big Data, Cloud Computing, DevOps, Security, UI/UX, Web Development, App Development, and more.
-        </p>
+        <div class="row", style="margin-bottom: 16px">
+            <div class="col-md-6">
+            <p class="lead">GigaByte is a leading company in the field of technology. We are a team of 1000+ people working together to make the world a better place. 
+            We are looking for talented individuals to join our team. If you are passionate about technology and want to work with the best in the industry, you have come to the right place. 
+            Our company is headquartered in the beautiful city of Bengaluru, India. We have offices in Delhi, Mumbai, Chennai, and Hyderabad. 
+                Specializations: Artificial Intelligence, Big Data, Cloud Computing, DevOps, Security, UI/UX, Web Development, App Development, and more.
+            </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/people.jpg" style="height: 320px;border-radius: 4px;" alt="pople working together">
+            </div>    
+        </div>  
         <h2 class="text-center mt-2 mb-4">Job Openings</h2>
             {% for job in jobs %}
                {% include 'jobitem.html' %}
             {% endfor %}
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4">Coyright 2024, GigaByte</p>        
+            <a class="btn btn-primary btn-lg" href="mailto:levelupmonk18@gmail.com?subject=Contacting%20you%20for%20a%20reason&body=My%20Name%3A%20%3Cyour%20name%3E%0D%0A%0D%0AHello!%20How%20can%20we%20help%20you%3F%0D%0A%0D%0A-%3E%20%3Cyour%20response%3E">Contact Us</a>        
         </div>
     </div>
+    {% include 'footer.html' %} 
 </body>
 </html>
