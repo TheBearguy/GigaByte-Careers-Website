@@ -19,13 +19,19 @@ JOBS = [
         "id": 3,
         "title": "Data Scientist",
         "location": "San Francisco, USA",
-        "salary": "$150,000"
+        "salary": "$170,000"
     },
     {
         "id": 4,
         "title": "Backend Engineer",
         "location": "Remote",
         "salary": "$120,000"
+    },
+    {
+        "id": 5,
+        "title": "Frontend Engineer",
+        "location": "Remote",
+        "salary": "$110,000"
     }
 ]
 
