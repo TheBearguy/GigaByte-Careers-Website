@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, text
-from dotenv import load_dotenv
+
 import os
-load_dotenv()
+
 engine = create_engine(os.getenv('DB_CONNECTION_STRING'))
 
 def load_jobs_from_db():
