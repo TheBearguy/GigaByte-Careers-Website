@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'bootstrap.html' %}
+    <title>Application Submitted</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+
+    <div class="container">
+        <h1 class="text-center mb-2 mt-2">GigaByte Careers</h1>
+        <p class="text-center mb-2 mt-2">Your Application for the role of <b>{{job['title']}}</b> has been Submitted! 
+            We will get back to you shortly :smirk
+        </p>
+        <b class="mb-0">Full Name</b>
+    <div class="mb-4">
+        {{application['full_name']}}
+    </div>
+    <b>Email</b>
+    <div class="mb-4">
+        {{application['email']}}
+    </div class="mb-4">
+    <b>Linkedin URL</b>
+    <div class="mb-4">
+        {{application['linkedin_url']}}
+    </div>
+    <b>Educational Background</b>
+    <div class="mb-4">
+        {{application['educational_background']}}
+    </div>
+    <b>Work Experience</b>
+    <div class="mb-4">
+        {{application['work_experience']}}
+    </div>
+    <b>Resume Url</b>
+    <div class="mb-4">
+        {{application['resume_url']}}
+    </div>
+    </div>
+
+    {% include 'footer.html' %} 
+</body>
+</html>
